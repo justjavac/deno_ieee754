@@ -20,8 +20,5 @@ jobs:
       - name: Format
         run: deno fmt --check
 
-      - name: Lint
-        run: deno lint --unstable
-
       - name: Tests
         run: deno test --unstable
