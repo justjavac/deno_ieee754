@@ -3,7 +3,6 @@
 [![tag](https://img.shields.io/github/release/justjavac/deno_ieee754)](https://github.com/justjavac/deno_ieee754/releases)
 [![Build Status](https://github.com/justjavac/deno_ieee754/workflows/ci/badge.svg?branch=master)](https://github.com/justjavac/deno_ieee754/actions)
 [![license](https://img.shields.io/github/license/justjavac/deno_ieee754)](https://github.com/justjavac/deno_ieee754/blob/master/LICENSE)
-[![](https://img.shields.io/badge/deno-v1.2-green.svg)](https://github.com/denoland/deno)
 
 Parse IEEE754 floating point numbers for Deno.
 
