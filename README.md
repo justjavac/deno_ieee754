@@ -18,7 +18,7 @@ const buf: Uint8Array = Uint8Array.of(0x42, 0x29, 0xae, 0x14);
 const f64 = ieee754.read(buf, 0, false, 52, 8);
 console.log(f64); // 42.42
 
-const EPSILON: number = 0.00001;
+const EPSILON = 0.00001;
 const f32 = ieee754.read(buf, 0, false, 23, 4);
 console.log(Math.abs(f32 - 42.42) < EPSILON); // true
 ```
