@@ -31,14 +31,6 @@ const buf = Uint8Array.from(arr); // convert to `Uint8Array`
 const num = ieee754.read(buf, 0, false, 23, 4);
 ```
 
-Use with `Deno.Buffer`. `Deno.Buffer` is almost always used with some I/O like files and sockets.
-
-```ts
-const dbuffer = new Deno.Buffer();
-const buf = dbuffer.bytes();
-const num = ieee754.read(buf, 0, false, 23, 4);
-```
-
 ## APIs
 
 **read**:
