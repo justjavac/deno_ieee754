@@ -26,7 +26,7 @@ console.log(Math.abs(f32 - 42.42) < EPSILON); // true
 Use with number array:
 
 ```ts
-const arr: number[] = [1, 2, 3];  // a number array
+const arr: number[] = [1, 2, 3]; // a number array
 const buf = Uint8Array.from(arr); // convert to `Uint8Array`
 const num = ieee754.read(buf, 0, false, 23, 4);
 ```
@@ -44,7 +44,13 @@ const num = ieee754.read(buf, 0, false, 23, 4);
  * @param mLen mantissa length
  * @param nBytes number of bytes
  */
-function read(buffer: Uint8Array, offset: number, isLE: boolean, mLen: number, nBytes: number): number
+function read(
+  buffer: Uint8Array,
+  offset: number,
+  isLE: boolean,
+  mLen: number,
+  nBytes: number,
+): number;
 ```
 
 **write**:
@@ -59,9 +65,17 @@ function read(buffer: Uint8Array, offset: number, isLE: boolean, mLen: number, n
  * @param mLen mantissa length
  * @param nBytes number of bytes
  */
-function write(buffer: Uint8Array, value: number, offset: number, isLE: boolean, mLen: number, nBytes: number): void
+function write(
+  buffer: Uint8Array,
+  value: number,
+  offset: number,
+  isLE: boolean,
+  mLen: number,
+  nBytes: number,
+): void;
 ```
 
 ### License
 
-[deno_ieee754](https://github.com/justjavac/deno_ieee754) is released under the MIT License. See the bundled [LICENSE](./LICENSE) file for details.
+[deno_ieee754](https://github.com/justjavac/deno_ieee754) is released under the
+MIT License. See the bundled [LICENSE](./LICENSE) file for details.
