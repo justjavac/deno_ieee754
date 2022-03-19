@@ -21,7 +21,7 @@ export default function read(
   const eLen: number = nBytes * 8 - mLen - 1;
   const eMax: number = (1 << eLen) - 1;
   const eBias: number = eMax >> 1;
-  let nBits: number = -7;
+  let nBits = -7;
   let i: number = isLE ? nBytes - 1 : 0;
   const d: number = isLE ? -1 : 1;
   let s: number = buffer[offset + i];
@@ -31,11 +31,13 @@ export default function read(
   e = s & ((1 << -nBits) - 1);
   s >>= -nBits;
   nBits += eLen;
+  // deno-lint-ignore no-empty
   for (; nBits > 0; e = e * 256 + buffer[offset + i], i += d, nBits -= 8) {}
 
   m = e & ((1 << -nBits) - 1);
   e >>= -nBits;
   nBits += mLen;
+  // deno-lint-ignore no-empty
   for (; nBits > 0; m = m * 256 + buffer[offset + i], i += d, nBits -= 8) {}
 
   if (e === 0) {

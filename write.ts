@@ -66,6 +66,7 @@ export default function write(
     ;
     mLen >= 8;
     buffer[offset + i] = m & 0xff, i += d, m /= 256, mLen -= 8
+    // deno-lint-ignore no-empty
   ) {
   }
 
@@ -75,6 +76,7 @@ export default function write(
     ;
     eLen > 0;
     buffer[offset + i] = e & 0xff, i += d, e /= 256, eLen -= 8
+    // deno-lint-ignore no-empty
   ) {
   }
 
